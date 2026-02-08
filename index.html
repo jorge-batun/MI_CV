@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Técnico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a2a6c;
+            --accent: #0331FF;
+            --bg: #f8f9fa;
+            --text: #333;
+        }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 0; }
+        
+        header { 
+            background: #033189;
+            color: white; text-align: center; padding: 3rem 1rem 5rem;
+        }
+
+        .container { max-width: 1000px; margin: -60px auto 50px; padding: 0 20px; }
+
+        /* SECCIÓN SOBRE MÍ */
+        .profile-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent);
+        }
+        .profile-text h2 { text-align: left; margin-top: 0; color: var(--primary); border-bottom: none; }
+        .hobbies { margin-top: 15px;  color: #555; }
+
+        /* GRILLA DE HABILIDADES */
+        h2 { color: var(--primary); text-align: center; margin: 40px 0 25px; text-transform: uppercase; letter-spacing: 2px; border-bottom: 2px solid var(--accent); display: inline-block; width: 100%; padding-bottom: 10px; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            /* Estos 3 comandos alinean los botones al fondo: */
+          
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgb(0, 217, 255); }
+        .card img { width: 45px; height: 45px; margin-bottom: 15px; }
+
+        @media (max-width: 768px) {
+            .profile-card { flex-direction: column; text-align: center; }
+            .profile-text h2 { text-align: center; }
+        }
+
+        .btn-cert {
+            display: inline;
+            margin-top: 15px;
+            padding: 8px 12px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+
+        .btn-cert:hover { background-color: var(--accent); }
+
+        @media (max-width: 768px) {
+            .profile-card { flex-direction: column; text-align: center; }
+            .profile-text h2 { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Jorge Alberto Batun Teh</h1>
+        <p>Estudiante de Ingeniería en Sistemas</p>
+    </header>
+
+    <div class="container">
+        
+        <section class="profile-card">
+            <img src="perfil.jpg" alt="Foto de Perfil" class="profile-img">
+            <div class="profile-text">
+                <h2>Sobre Mí</h2>
+                <p>Soy un entusiasta de la tecnología enfocado en el desarrollo web y la administración de sistemas Linux. Me gusta entender cómo funcionan las cosas desde la base, ya sea configurando un servidor Debian o estructurando una base de datos en MySQL.</p>
+                <div class="hobbies">
+                    <strong>Pasatiempos:</strong> 
+                    Explorar nuevas distribuciones de Linux, aprender sobre ciberseguridad, ver cine y jugar beisbol
+                </div>
+
+                <div class="contact-links">
+                    <br><span><i class="fas fa-map-marker-alt"></i> San Francisco, Panaba, Yucatán, México</span> <br>
+                    <span><i class="fas fa-phone"></i> +52 986 100 0618</span><br>
+                    <span><i class="fas fa-envelope"></i> jorge.batun17@gmail.com</span><br>
+                    <a href="https://github.com/tu-usuario" style="text-decoration:none; color:inherit;"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <h2>Certificaciones Oficiales</h2>
+        <div class="skills-grid">
+            
+            <div class="card cert-card">
+                <div>
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cisco.svg" alt="Cisco">
+                    <h3>CCNA: Introducción a las Redes</h3>
+                    <p>Cisco Networking Academy. Arquitectura y componentes de redes de computadoras.</p>
+                </div>
+                <a href="certificados/cisco_intro.pdf" target="_blank" class="btn-cert">Ver Certificado</a>
+            </div>
+
+            <div class="card cert-card">
+                <div>
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cisco.svg" alt="Cisco">
+                    <h3>CCNA: Conmutación y Enrutamiento</h3>
+                    <p>Fundamentos de Switching, Routing y Redes Inalámbricas (IT Tizimín).</p>
+                </div>
+                <a href="certificados/cisco_switching.pdf" target="_blank" class="btn-cert">Ver Certificado</a>
+            </div>
+
+            <div class="card cert-card">
+                <div>
+                    <i class="fas fa-server fa-3x" style="color: var(--primary); margin-bottom: 15px;"></i>
+                    <h3>Administrador de Servidores</h3>
+                    <p>Capacitación técnica de 100 horas en gestión de infraestructura de servidores.</p>
+                </div>
+                <a href="certificados/admin_servidores.pdf" target="_blank" class="btn-cert">Ver Certificado</a>
+            </div>
+
+            <div class="card cert-card">
+                <div>
+                    <i class="fas fa-database fa-3x" style="color: var(--primary); margin-bottom: 15px;"></i>
+                    <h3>Administrador de Bases de Datos</h3>
+                    <p>Gestión de DB relacionales con un avance del 100% (Equivalente a 83 horas).</p>
+                </div>
+                <a href="certificados/admin_db.pdf" target="_blank" class="btn-cert">Ver Certificado</a>
+            </div>
+
+            <div class="card cert-card">
+                <div>
+                    <i class="fas fa-code fa-3x" style="color: var(--primary); margin-bottom: 15px;"></i>
+                    <h3>Lógica de Programación</h3>
+                    <p>Dominio de estructuras de control y algoritmos (Equivalente a 60 horas).</p>
+                </div>
+                <a href="certificados/logica_programacion.pdf" target="_blank" class="btn-cert">Ver Certificado</a>
+            </div>
+
+            <div class="card cert-card">
+                <div>
+                    <i class="fas fa-cubes fa-3x" style="color: var(--primary); margin-bottom: 15px;"></i>
+                    <h3>Paradigma de POO</h3>
+                    <p>Programación Orientada a Objetos aplicada (Acreditación de 40 horas).</p>
+                </div>
+                <a href="certificados/poo.pdf" target="_blank" class="btn-cert">Ver Certificado</a>
+            </div>
+
+            <div class="card cert-card">
+                <div>
+                    <i class="fas fa-project-diagram fa-3x" style="color: var(--primary); margin-bottom: 15px;"></i>
+                    <h3>Estructura de Datos</h3>
+                    <p>Fundamentos y manejo eficiente de datos (Acreditación de 40 horas).</p>
+                </div>
+                <a href="certificados/estructuras_datos.pdf" target="_blank" class="btn-cert">Ver Certificado</a>
+            </div>
+
+        </div>
+
+        <h2>Lenguajes</h2>
+        <div class="skills-grid">
+             <div class="card">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg" alt="HTML5">
+                <h3>HTML5</h3>
+                <p>Maquetación semántica y estructuración de contenido web.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg" alt="CSS3">
+                <h3>CSS3</h3>
+                <p>Diseño responsivo, animaciones y estilos modernos.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/php.svg" alt="PHP">
+                <h3>PHP</h3>
+                <p>Lógica de servidor y conexión a bases de datos.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg" alt="JS">
+                <h3>JavaScript</h3>
+                <p>Interactividad y componentes modernos.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg" alt="MySQL">
+                <h3>MySQL</h3>
+                <p>Gestión y diseño de bases de datos relacionales.</p>
+            </div>
+        </div>
+
+        <h2>Sistemas Operativos</h2>
+        <div class="skills-grid">
+            <div class="card">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/debian.svg" alt="Debian">
+                <h3>Debian / Ubuntu</h3>
+                <p>Administración de servidores y servicios.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/fedora.svg" alt="Fedora">
+                <h3>Fedora</h3>
+                <p>Pruebas de software y desarrollo cotidiano.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kalilinux.svg" alt="Kali">
+                <h3>Kali Linux</h3>
+                <p>Auditoría de seguridad y redes.</p>
+            </div>
+        </div>
+
+        <h2>Herramientas</h2>
+        <div class="skills-grid">
+            <div class="card">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/git.svg" alt="Git">
+                <h3>Git & GitHub</h3>
+                <p>Control de versiones y colaboración.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/virtualbox.svg" alt="VirtualBox">
+                <h3>Virtualización</h3>
+                <p>Manejo de máquinas virtuales y entornos de prueba.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer style="text-align: center; padding: 40px; color: #888; background: #fff; margin-top: 50px;">
+        <p>&copy; 2026 - La calidad empieza con la educacion y termina con la educacion</p>
+    </footer>
+
+</body>
+</html>
+
+
